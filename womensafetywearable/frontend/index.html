@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Women Safety Wearable
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="header">
+
+    <div>
+
+        <h1>
+            Women Safety Wearable
+        </h1>
+
+        <p>
+            Real-Time Safety Monitoring System
+        </p>
+
+    </div>
+
+
+    <div
+        id="connectionStatus"
+        class="connection offline"
+    >
+
+        ● BACKEND OFFLINE
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================================
+     DASHBOARD CARDS
+========================================= -->
+
+<section class="dashboard-grid">
+
+
+    <!-- DEVICE -->
+
+    <div class="card">
+
+        <p class="card-label">
+            DEVICE STATUS
+        </p>
+
+        <h2 id="deviceStatus">
+            OFFLINE
+        </h2>
+
+        <p>
+
+            Device ID:
+
+            <strong id="deviceId">
+                WSW-001
+            </strong>
+
+        </p>
+
+    </div>
+
+
+
+    <!-- BATTERY -->
+
+    <div class="card">
+
+        <p class="card-label">
+            BATTERY
+        </p>
+
+        <h2 id="battery">
+            --
+        </h2>
+
+        <div class="battery-container">
+
+            <div
+                id="batteryBar"
+                class="battery-bar"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- LAST SEEN -->
+
+    <div class="card">
+
+        <p class="card-label">
+            LAST COMMUNICATION
+        </p>
+
+        <h2 id="lastSeen">
+            --
+        </h2>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================
+     EMERGENCY STATUS
+========================================= -->
+
+<section
+    id="emergencyCard"
+    class="emergency safe"
+>
+
+    <div class="emergency-icon">
+
+        🛡️
+
+    </div>
+
+    <div>
+
+        <h2 id="emergencyTitle">
+
+            SYSTEM SAFE
+
+        </h2>
+
+        <p id="emergencyMessage">
+
+            No active emergency detected.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     LOCATION
+========================================= -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        <h2>
+            Wearable Location
+        </h2>
+
+        <span class="live-tag">
+            LIVE
+        </span>
+
+    </div>
+
+
+    <div class="location-grid">
+
+
+        <div class="location-box">
+
+            <span>
+                LATITUDE
+            </span>
+
+            <strong id="latitude">
+                --
+            </strong>
+
+        </div>
+
+
+        <div class="location-box">
+
+            <span>
+                LONGITUDE
+            </span>
+
+            <strong id="longitude">
+                --
+            </strong>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SYSTEM TEST
+========================================= -->
+
+<section class="card">
+
+    <h2>
+        Wearable System Test
+    </h2>
+
+    <p class="description">
+
+        These buttons simulate signals from
+        the wearable. Later the ESP32 will
+        send the same data automatically.
+
+    </p>
+
+
+    <div class="button-group">
+
+        <button
+            class="sos-button"
+            onclick="triggerSOS()"
+        >
+
+            🚨 TEST SOS
+
+        </button>
+
+
+        <button
+            class="fall-button"
+            onclick="triggerFall()"
+        >
+
+            ⚠️ TEST FALL
+
+        </button>
+
+
+        <button
+            class="reset-button"
+            onclick="resetDevice()"
+        >
+
+            ✓ RESET SAFE
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ALERT HISTORY
+========================================= -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        <h2>
+            Recent Alerts
+        </h2>
+
+        <span id="alertCount">
+            0 alerts
+        </span>
+
+    </div>
+
+
+    <div id="alerts">
+
+        <div class="empty">
+
+            No alerts recorded.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     VAWG DATA
+========================================= -->
+
+<section class="card">
+
+    <div class="section-title">
+
+        <div>
+
+            <h2>
+                Violence Against Women
+            </h2>
+
+            <p class="description">
+
+                Statistical data section
+
+            </p>
+
+        </div>
+
+        <span class="data-source">
+            WORLD BANK / UN
+        </span>
+
+    </div>
+
+
+    <div id="vawgData">
+
+        <div class="vawg-placeholder">
+
+            <span>
+                📊
+            </span>
+
+            <p>
+                Real VAWG statistical data
+                will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Women Safety Wearable |
+        Real-Time Monitoring System
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
