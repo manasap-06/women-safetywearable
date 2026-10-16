@@ -2,7 +2,7 @@
 // BACKEND URL
 // ==================================================
 
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = "https://women-safetywearable-ba54.onrender.com";
 
 
 // ==================================================
